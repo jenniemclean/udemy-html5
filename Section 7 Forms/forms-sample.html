@@ -4,60 +4,88 @@
 <meta charset="utf-8">
 <title>Forms</title>
 <style>
-
+label {
+display:block;
+width:200px;
+float:left;
+text-align:right;
+margin:10px 5px;
+clear:left;
+}
+input,select,textarea {
+margin:10px 5px;
+vertical-align:middle;
+}
+checks {
+vertical-align:bottom;
+}
+#submit {
+margin-left:200px;
+}
 </style>
 </head>
 
 <body>
 <h1>Forms</h1>
+<form action="form-submit.php" method="get">
+<fieldset>
+<legend>Personal details</legend>
 
-First Name:
+<label for="first-name">First Name:</label>
+<input id="first-name" type="text" name="first name" autofocus required/>
+<br/>
+<label for="email">Email:</label
+<input id="email" type="text" name="email" placeholder="enter a valid email address" required />
+</fieldset>
 
 <br/>
-Email:
+<label for="check" >Checkbox:<label>
+<input type="checkbox" class="checks" id="check" name="check" value="check1" />check 1
+<input type="checkbox" class="checks"id="check" name="check" value="check2" />check 2
+<br/>
+<label for="radio">Radio:<label>
+<input type="radio" class="checks" id="radio" name="radio" value="radio1" />radio 1
+<input type="radio" class="checks" id="radio" name="radio" value="radio2" />radio 2
+<br/>
+<label for="message">Message:<label>
+<textarea id="message" name="message">your message here</textarea>
 
 <br/>
-Checkbox:
-check 1
-check 2
-<br/>
-Radio:
-radio 1
-radio 2
-<br/>
-Message:
+<label for="dropdown">Dropdown:<label>
+
+<select name="dropdown" id="dropdown">
+<option value="option1">Option 1</option>
+<option value="option2">Option 2</option>
+<option value="option3">Option 3</option>
+<option value="option4">Option 4</option>
+<option value="option5">Option 5</option>
+</select>
 
 <br/>
-Dropdown:
-
-Option 1
-Option 2
-Option 3
-Option 4
-Option 5
+<label>Password:<label>
+<input type="password" name="password" id="password"/>
 
 <br/>
-Password:
+<label for="number">Number:<label>
+<input type="number" name="number" id="number" />
 
 <br/>
-Number: 
+<label for="range">Range:<label>
+1 <input type="range" name="range" min="1" max="10" value="5" id="range"/> 10
+<br/>
+<label for="date">Date:<label>
+<input type="date" name="date" id="date"/>
+<br/>
+<label for="time">Time:<label>
+<input type="time" name="time" id="time" />
+<br/>
+<label for="color">Color:<label>
+<input type="color" name="color" id="color"/>
 
 <br/>
-Range: 
-1 10
-<br/>
-Date: 
+<input id="submit" type="submit" value="Send" />
 
-<br/>
-Time: 
-
-<br/>
-Color: 
-
-
-<br/>
-
-
+</form>
 
 </body>
 </html>

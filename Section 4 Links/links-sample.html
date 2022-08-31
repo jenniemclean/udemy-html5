@@ -3,6 +3,32 @@
 <head>
 <meta charset="utf-8">
 <title>Links</title>
+<style>
+a:link {
+  color:red;
+  text-decoration:none;
+}
+a:visited {
+  color:green;
+}
+a:hover {
+  color:blue;
+}
+nav ul {
+  list-style-type:none;
+}
+nav li {
+  display:inline;
+}
+nav a:link,nav a:visited {
+  background-color:red;
+  color:white;
+}
+nav a:hover {
+  background-color:blue;
+}
+</style>
+
 </head>
 
 <body>
@@ -10,21 +36,26 @@
 <h1>Links</h1>
 
 <h2>Internal link</h2>
-linked page
+<a href="other-pages/linked-page1.html">linked page</a>
 
 <h2>External link</h2>
-http://www.wikipedia.org/
+<a href="http://www.wikipedia.org/" target="_blank">wikipedia</a>
 
 <br/><br/>
+<a href="other-pages/linked-page2.html"
 <img src="golden-gate-sm.jpg" alt="the golden gate bridge" width="500" height="213" />
-
+</a>
+<br/>
+<a href="mailto:someone@somedomain.com?Subject=Contact">Contact us</a>
 <h1>Navigation Links</h1>
-<ul>
-<li>Link 1</li>
-<li>Link 2</li>
-<li>Link 3</li>
-</ul>
 
+<nav>
+<ul>
+<li><a href="other-pages/linked-page1.html">Link 1</a></li>
+<li><a href="other-pages/linked-page2.html">Link 2</a></li>
+<li><a href="other-pages/linked-page3.html">Link 3</a></li>
+</ul>
+</nav>
 
 </body>
 </html>
